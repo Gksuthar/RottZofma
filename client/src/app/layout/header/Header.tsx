@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Container, Badge } from 'react-bootstrap';
 import { BsSearch, BsHeart, BsBag } from 'react-icons/bs';
 
-const Header = () => {
+const   Header = () => {
     return (
         <Navbar bg="white" expand="lg" className="py-3 border-bottom">
             <Container>
