@@ -1,0 +1,88 @@
+.custom-slider-container {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.slider-bg {
+    background-size: cover;
+    background-position: center;
+    transition: transform 10s linear;
+}
+
+/* Slow Zoom Animation when active */
+.carousel-item.active .slider-bg {
+    transform: scale(1.15);
+}
+
+.premium-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 20%, rgba(0,0,0,0) 80%);
+}
+
+.slider-caption {
+    bottom: 20% !important;
+    left: 8% !important;
+    right: auto !important;
+    z-index: 10;
+}
+
+.badge-text {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 15px;
+    display: inline-block;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.main-title {
+    color: white;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+
+.sub-title {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.zomato-btn {
+    background-color: #ef4f5f;
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+/* Custom Navigation Dots */
+.carousel-indicators {
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+    left: 8%;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.carousel-indicators .active {
+    background-color: #ef4f5f;
+    transform: scale(1.3);
+}

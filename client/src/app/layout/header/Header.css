@@ -1,0 +1,116 @@
+/* Font Import - Use a clean sans-serif like Inter or Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+.premium-header {
+    font-family: 'Inter', sans-serif;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1050;
+    background-color: white; /* Fallback */
+}
+
+/* Logo Styling */
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.logo-text {
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 1.25rem;
+    color: #1a1a1a;
+}
+
+/* Nav Links */
+.nav-links-gap {
+    gap: 1.5rem;
+}
+
+.nav-item-premium {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #4a4a4a !important;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-item-premium::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #198754; /* Success Green */
+    transition: width 0.3s ease;
+}
+
+.nav-item-premium:hover::after {
+    width: 100%;
+}
+
+.nav-item-premium.active {
+    color: #000 !important;
+    font-weight: 600;
+}
+
+/* Action Icons */
+.action-icon {
+    color: #1a1a1a;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.action-icon:hover {
+    transform: translateY(-2px);
+    color: #198754;
+}
+
+/* Search Bar Premium */
+.search-wrapper {
+    position: relative;
+    background: #f4f4f4;
+    padding: 6px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    padding-left: 10px;
+    font-size: 0.85rem;
+    outline: none;
+    width: 150px;
+}
+
+/* Badges */
+.premium-badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #000;
+    color: white;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+.premium-badge.highlight {
+    background: #ef4f5f; /* Zomato-style highlight */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .nav-links-gap { padding: 20px 0; }
+    .logo-text { font-size: 1.1rem; }
+}

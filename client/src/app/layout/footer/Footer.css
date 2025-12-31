@@ -1,0 +1,159 @@
+.premium-footer {
+    background-color: #111111; /* Sleek Dark Theme */
+    color: #ffffff;
+    padding-top: 60px;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-top-row {
+    padding-bottom: 30px;
+}
+
+.footer-logo-box {
+    font-size: 2.5rem;
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.footer-brand-name {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.footer-tagline {
+    color: #198754; /* Success Green */
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Social Icons */
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #222;
+    color: #fff;
+    border-radius: 50%;
+    margin-left: 12px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: #ef4f5f; /* Accent Color */
+    transform: translateY(-5px);
+    color: #fff;
+}
+
+/* Content Styles */
+.footer-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fff;
+    position: relative;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #ef4f5f;
+}
+
+.footer-about-text {
+    color: #999;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.footer-list, .footer-contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-list li {
+    margin-bottom: 12px;
+}
+
+.footer-list a {
+    color: #999;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.95rem;
+}
+
+.footer-list a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.footer-contact-list li {
+    display: flex;
+    gap: 15px;
+    color: #999;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.contact-icon {
+    color: #ef4f5f;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.footer-contact-list a {
+    color: #999;
+    text-decoration: none;
+}
+
+/* Badges */
+.badge-item {
+    background: #222;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    margin-right: 10px;
+    color: #198754;
+    border: 1px solid #333;
+}
+
+/* Bottom Bar */
+.footer-divider {
+    border-color: #333;
+}
+
+.footer-copyright-bar {
+    background: #000;
+    padding: 25px 0;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.designer-credit strong {
+    color: #999;
+}
+
+.pulse-heart {
+    color: #ef4f5f;
+    display: inline-block;
+    animation: heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}

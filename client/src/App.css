@@ -1,0 +1,212 @@
+.shop-page-wrapper {
+    background-color: #fcfcfc;
+    padding-bottom: 80px;
+}
+
+.shop-header h2 {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    color: #1a1a1a;
+}
+
+/* Make Tabs Sticky on Scroll */
+.sticky-tabs-wrapper {
+    position: sticky;
+    top: 70px; /* Adjust based on your Navbar height */
+    z-index: 100;
+    background: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+}
+
+/* Spacing between slider and content */
+.custom-slider-container {
+    margin-bottom: 0;
+    border-radius: 0; /* Full width for shop top */
+}
+
+/* Fade in animation for the grid */
+.row {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .shop-header h2 {
+        font-size: 1.8rem;
+    }
+    .sticky-tabs-wrapper {
+        top: 60px;
+    }
+}
+
+
+/* About.css */
+:root {
+  --rapido-yellow: #f9d807;
+  --rapido-black: #212121;
+}
+
+.about-hero {
+  background-color: var(--rapido-black);
+  color: white;
+  padding: 80px 0;
+  border-bottom: 8px solid var(--rapido-yellow);
+}
+
+.yellow-text {
+  color: var(--rapido-yellow);
+}
+
+.btn-rapido {
+  background-color: var(--rapido-yellow);
+  color: var(--rapido-black);
+  font-weight: 700;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: transform 0.2s;
+}
+
+.btn-rapido:hover {
+  transform: scale(1.05);
+  background-color: #e5c606;
+}
+
+.stat-card {
+  border: none;
+  border-bottom: 4px solid var(--rapido-yellow);
+  transition: all 0.3s ease;
+  background: #fdfdfd;
+}
+
+.stat-card:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+}
+
+.section-title {
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  background: var(--rapido-yellow);
+  bottom: -10px;
+  left: 0;
+}
+
+/* Additional Premium Styles */
+.value-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--rapido-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.timeline-box {
+  border-left: 3px solid var(--rapido-yellow);
+  padding-left: 30px;
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: var(--rapido-black);
+  border: 3px solid var(--rapido-yellow);
+  border-radius: 50%;
+  left: -39px;
+  top: 5px;
+}
+
+.cta-banner {
+  background: linear-gradient(135deg, #212121 0%, #3d3d3d 100%);
+  border-radius: 24px;
+  padding: 60px;
+  color: white;
+  overflow: hidden;
+}
+
+/* Contact.css */
+:root {
+  --rapido-yellow: #f9d807;
+  --rapido-black: #212121;
+}
+
+.contact-header {
+  background-color: var(--rapido-black);
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+}
+
+.contact-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  margin-top: -60px; /* Overlaps the header for a premium look */
+  background: #fff;
+}
+
+.contact-info-box {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  height: 100%;
+  transition: 0.3s;
+  border-left: 4px solid transparent;
+}
+
+.contact-info-box:hover {
+  border-left: 4px solid var(--rapido-yellow);
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background: var(--rapido-yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.form-control {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.form-control:focus {
+  border-color: var(--rapido-yellow);
+  box-shadow: 0 0 0 0.25rem rgba(249, 216, 7, 0.25);
+}

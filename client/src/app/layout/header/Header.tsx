@@ -1,66 +1,68 @@
-import React from 'react';
-import { Navbar, Nav, Container, Badge } from 'react-bootstrap';
-import { BsSearch, BsHeart, BsBag } from 'react-icons/bs';
+import React, { useState, useEffect } from 'react';
+import { Navbar, Nav, Container, Badge, InputGroup, Form } from 'react-bootstrap';
+import { BsSearch, BsHeart, BsBag, BsPerson } from 'react-icons/bs';
+import './Header.css';
 
-const   Header = () => {
+const Header = () => {
+    const [scrolled, setScrolled] = useState(false);
+
+    // Effect to handle scroll background change
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <Navbar bg="white" expand="lg" className="py-3 border-bottom">
+        <Navbar 
+            expand="lg" 
+            sticky="top" 
+            className={`premium-header transition-all ${scrolled ? 'py-2 shadow-sm bg-white' : 'py-3 bg-transparent'}`}
+        >
             <Container>
-                {/* Mobile Toggle */}
-                <Navbar.Toggle aria-controls="navbar-nav" />
+                {/* 1. Mobile Toggle (Left) */}
+                <Navbar.Toggle aria-controls="navbar-nav" className="border-0 shadow-none" />
 
-                {/* Logo - Centered on Mobile if desired, or handled via order */}
-                <Navbar.Brand href="/" className="d-lg-none mx-auto">
-                    <span className="fw-bold text-success">Rootz of Maa</span>
+                {/* 2. Brand Logo (Centered on Mobile, Left on Desktop) */}
+                <Navbar.Brand href="/" className="d-flex align-items-center gap-2">
+                    <div className="logo-icon">🌱</div>
+                    <span className="logo-text">ROOTZ <span className="text-muted fw-light">OF</span> MAA</span>
                 </Navbar.Brand>
 
-                {/* Collapsible Content */}
+                {/* 3. Navigation Links (Desktop Center) */}
                 <Navbar.Collapse id="navbar-nav">
-                    <div className="d-flex w-100 justify-content-between align-items-center">
-
-                        {/* Left Side Navigation */}
-                        <Nav className="d-flex gap-3">
-                            <Nav.Link href="/" className="text-dark fw-medium">Home</Nav.Link>
-                            <Nav.Link href="/about" className="text-dark fw-medium">About Us</Nav.Link>
-                            <Nav.Link href="/shop" className="text-dark fw-medium">Shop</Nav.Link>
-                            <Nav.Link href="/tracking" className="text-dark fw-medium">Order Tracking</Nav.Link>
-                            <Nav.Link href="/contact" className="text-dark fw-medium">Contact Us</Nav.Link>
-                        </Nav>
-
-                        {/* Center Logo (Desktop) */}
-                        <Navbar.Brand href="/" className="d-none d-lg-block mx-auto position-absolute start-50 translate-middle-x">
-                            <div className="text-center">
-                                {/* Placeholder for the Logo Image */}
-                                <div className="bg-warning rounded-circle d-flex align-items-center justify-content-center mx-auto mb-1" style={{ width: '50px', height: '50px' }}>
-                                    <span className="text-white">🌱</span>
-                                </div>
-                                <div className="fw-bold text-success font-monospace" style={{ lineHeight: '1' }}>Rootz of Maa</div>
-                            </div>
-                        </Navbar.Brand>
-
-                        {/* Right Side Icons/Links */}
-                        <div className="d-flex align-items-center gap-4">
-                            <Nav.Link href="/signin" className="text-dark fw-medium p-0">Sign in</Nav.Link>
-
-                            <BsSearch className="fs-5 cursor-pointer" role="button" />
-
-                            <div className="position-relative cursor-pointer">
-                                <BsHeart className="fs-5" role="button" />
-                                <Badge bg="dark" pill className="position-absolute top-0 start-100 translate-middle" style={{ fontSize: '0.6rem' }}>
-                                    0
-                                </Badge>
-                            </div>
-
-                            <div className="position-relative cursor-pointer">
-                                <BsBag className="fs-5" role="button" />
-                                <Badge bg="dark" pill className="position-absolute top-0 start-100 translate-middle" style={{ fontSize: '0.6rem' }}>
-                                    1
-                                </Badge>
-                            </div>
-                        </div>
-
-                    </div>
+                    <Nav className="mx-auto nav-links-gap">
+                        <Nav.Link href="/" className="nav-item-premium active">Home</Nav.Link>
+                        <Nav.Link href="/shop" className="nav-item-premium">Shop</Nav.Link>
+                        <Nav.Link href="/about" className="nav-item-premium">Our Story</Nav.Link>
+                        <Nav.Link href="/contact" className="nav-item-premium">Contact</Nav.Link>
+                    </Nav>
                 </Navbar.Collapse>
+
+                {/* 4. Action Icons (Right) */}
+                <div className="d-flex align-items-center gap-3 gap-md-4">
+                    {/* Search Bar - Hidden on Mobile, Premium style */}
+                    <div className="d-none d-xl-block search-wrapper">
+                        <BsSearch className="search-icon" />
+                        <input type="text" placeholder="Search organic..." className="search-input" />
+                    </div>
+
+                    <Nav.Link href="/signin" className="d-none d-md-block p-0">
+                        <BsPerson className="fs-4 action-icon" />
+                    </Nav.Link>
+
+                    <div className="position-relative">
+                        <BsHeart className="fs-4 action-icon" />
+                        <span className="premium-badge">0</span>
+                    </div>
+
+                    <div className="position-relative">
+                        <BsBag className="fs-4 action-icon" />
+                        <span className="premium-badge highlight">2</span>
+                    </div>
+                </div>
             </Container>
         </Navbar>
     );

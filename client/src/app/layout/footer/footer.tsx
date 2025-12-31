@@ -1,4 +1,10 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { 
+  BsInstagram, BsFacebook, BsTwitter, BsLinkedin, 
+  BsEnvelopeFill, BsTelephoneFill, BsGeoAltFill 
+} from 'react-icons/bs';
+import './Footer.css';
 
 interface FooterProps {
   companyName?: string;
@@ -7,176 +13,99 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ 
   companyName = "Rootz of MAA",
-  companyDescription = "Rootz of MAA, a brand by Maa Khodiyar Food Products Pvt. Ltd., is a proudly a part of the Royal Group of Companies."
+  companyDescription = "Rootz of MAA, a brand by Maa Khodiyar Food Products Pvt. Ltd., is proudly a part of the Royal Group of Companies."
 }) => {
   return (
-    <>
-      <style>{`
-        .footer-container {
-          background-color: #f8f9fa;
-          padding: 60px 20px 40px;
-          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-        }
-        .footer-content {
-          max-width: 1200px;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 40px;
-          margin-bottom: 40px;
-        }
-        .footer-section h5 {
-          font-size: 18px;
-          font-weight: 700;
-          color: #212529;
-          margin-bottom: 20px;
-        }
-        .footer-logo-section {
-          display: flex;
-          align-items: flex-start;
-          margin-bottom: 16px;
-        }
-        .footer-logo {
-          width: 60px;
-          height: 60px;
-          background-color: #ffc107;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 28px;
-          flex-shrink: 0;
-        }
-        .footer-brand {
-          margin-left: 16px;
-          font-size: 22px;
-          font-weight: 700;
-          color: #198754;
-        }
-        .footer-description {
-          color: #6c757d;
-          font-size: 14px;
-          line-height: 1.6;
-        }
-        .footer-links {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        .footer-links li {
-          margin-bottom: 12px;
-        }
-        .footer-links a {
-          color: #6c757d;
-          text-decoration: none;
-          font-size: 14px;
-          transition: color 0.2s;
-        }
-        .footer-links a:hover {
-          color: #198754;
-        }
-        .footer-contact {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-        .footer-contact li {
-          color: #6c757d;
-          font-size: 14px;
-          margin-bottom: 12px;
-          line-height: 1.6;
-        }
-        .footer-contact a {
-          color: #6c757d;
-          text-decoration: none;
-          transition: color 0.2s;
-        }
-        .footer-contact a:hover {
-          color: #198754;
-        }
-        .footer-bottom {
-          border-top: 1px solid #dee2e6;
-          padding-top: 24px;
-          text-align: center;
-        }
-        .footer-bottom p {
-          color: #6c757d;
-          font-size: 14px;
-          margin: 4px 0;
-        }
-        .footer-bottom strong {
-          color: #212529;
-          font-weight: 600;
-        }
-        .heart {
-          color: #dc3545;
-        }
-        @media (max-width: 768px) {
-          .footer-content {
-            grid-template-columns: 1fr;
-            gap: 32px;
-          }
-        }
-      `}</style>
-      
-      <footer className="footer-container">
-        <div className="footer-content">
-          {/* Company Info Section */}
-          <div className="footer-section">
-            <div className="footer-logo-section">
-              <div className="footer-logo">🌿</div>
-              <h4 className="footer-brand">{companyName}</h4>
+    <footer className="premium-footer">
+      <Container>
+        {/* Top Section: Newsletter or Branding */}
+        <div className="footer-top-row">
+          <Row className="align-items-center">
+            <Col lg={6}>
+              <div className="d-flex align-items-center gap-3 mb-4 mb-lg-0">
+                <div className="footer-logo-box">🌿</div>
+                <div>
+                  <h3 className="footer-brand-name">{companyName}</h3>
+                  <p className="footer-tagline">Pure. Organic. From the Roots.</p>
+                </div>
+              </div>
+            </Col>
+            <Col lg={6} className="text-lg-end">
+              <div className="social-links">
+                <a href="#" className="social-icon"><BsInstagram /></a>
+                <a href="#" className="social-icon"><BsFacebook /></a>
+                <a href="#" className="social-icon"><BsTwitter /></a>
+                <a href="#" className="social-icon"><BsLinkedin /></a>
+              </div>
+            </Col>
+          </Row>
+        </div>
+
+        <hr className="footer-divider" />
+
+        {/* Main Content */}
+        <Row className="py-5">
+          <Col lg={4} md={12} className="mb-5 mb-lg-0">
+            <h5 className="footer-heading">About Us</h5>
+            <p className="footer-about-text">{companyDescription}</p>
+            <div className="certification-badges mt-4">
+              <span className="badge-item">ISO Certified</span>
+              <span className="badge-item">100% Organic</span>
             </div>
-            <p className="footer-description">{companyDescription}</p>
-          </div>
+          </Col>
 
-          {/* Products Section */}
-          <div className="footer-section">
-            <h5>Products</h5>
-            <ul className="footer-links">
-              <li><a href="#">Fruits Organic Powders</a></li>
-              <li><a href="#">Vegetables Organic Powders</a></li>
-              <li><a href="#">Herbs Organic Powders</a></li>
-              <li><a href="#">Herbal Organic Powders</a></li>
+          <Col lg={2} md={4} xs={6} className="mb-4">
+            <h5 className="footer-heading">Products</h5>
+            <ul className="footer-list">
+              <li><a href="#">Fruit Powders</a></li>
+              <li><a href="#">Veggie Extracts</a></li>
+              <li><a href="#">Organic Herbs</a></li>
+              <li><a href="#">Healing Roots</a></li>
             </ul>
-          </div>
+          </Col>
 
-          {/* Quick Links Section */}
-          <div className="footer-section">
-            <h5>Quick Links</h5>
-            <ul className="footer-links">
+          <Col lg={2} md={4} xs={6} className="mb-4">
+            <h5 className="footer-heading">Experience</h5>
+            <ul className="footer-list">
               <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Shipping & Refund Policy</a></li>
-              <li><a href="#">Terms & Condition</a></li>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Track Order</a></li>
             </ul>
-          </div>
+          </Col>
 
-          {/* Contact Section */}
-          <div className="footer-section">
-            <h5>Contact</h5>
-            <ul className="footer-contact">
-              <li><a href="tel:+919033064811">+91 90330 64811</a></li>
-              <li><a href="tel:+919033064812">+91 90330 64812</a></li>
-              <li><a href="mailto:info@maakhfp.in">info@maakhfp.in</a></li>
-              <li><a href="mailto:sales@maakhfp.in">sales@maakhfp.in</a></li>
-              <li>Plot No 82, Swastik Industrial Park, Kuha Gaom Road, Kuha, Ahemdabad - 382433</li>
+          <Col lg={4} md={4} className="mb-4">
+            <h5 className="footer-heading">Get in Touch</h5>
+            <ul className="footer-contact-list">
+              <li>
+                <BsGeoAltFill className="contact-icon" />
+                <span>Plot No 82, Swastik Industrial Park, Ahmedabad - 382433</span>
+              </li>
+              <li>
+                <BsTelephoneFill className="contact-icon" />
+                <a href="tel:+919033064811">+91 90330 64811</a>
+              </li>
+              <li>
+                <BsEnvelopeFill className="contact-icon" />
+                <a href="mailto:info@maakhfp.in">info@maakhfp.in</a>
+              </li>
             </ul>
-          </div>
-        </div>
+          </Col>
+        </Row>
+      </Container>
 
-        {/* Copyright Section */}
-        <div className="footer-bottom">
-          <p>
-            Copyright © 2025 All Right Reserved by <strong>Maa Khodiyar Foods</strong>
-          </p>
-          <p>
-            <span className="heart">❤️</span> Design by <strong>JK Branding India Pvt. Ltd.</strong>
-          </p>
-        </div>
-      </footer>
-    </>
+      {/* Bottom Bar */}
+      <div className="footer-copyright-bar">
+        <Container>
+          <div className="d-md-flex justify-content-between align-items-center text-center text-md-start">
+            <p className="mb-0">© 2025 <strong>Maa Khodiyar Foods</strong>. All Rights Reserved.</p>
+            <p className="mb-0 designer-credit">
+              Crafted with <span className="pulse-heart">❤️</span> by <strong>JK Branding India</strong>
+            </p>
+          </div>
+        </Container>
+      </div>
+    </footer>
   );
 };
 

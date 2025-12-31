@@ -1,0 +1,83 @@
+.category-section {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #1c1c1c;
+    letter-spacing: -0.5px;
+}
+
+/* Horizontal scroll on mobile like Zomato */
+.category-scroll-wrapper {
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scrollbar-width: none; /* Firefox */
+}
+
+.category-scroll-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.category-card {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-image-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%; /* Circular Look */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    background: #f8f8f8;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-img {
+    transform: scale(1.15);
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.1) 100%);
+    transition: opacity 0.3s ease;
+}
+
+.category-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.category-count {
+    font-size: 0.85rem;
+    color: #828282;
+    font-weight: 500;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .category-image-container {
+        width: 110px;
+        height: 110px;
+    }
+    .category-name {
+        font-size: 0.95rem;
+    }
+    .section-title {
+        font-size: 1.4rem;
+    }
+}

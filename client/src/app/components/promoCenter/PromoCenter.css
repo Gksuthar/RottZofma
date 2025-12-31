@@ -1,0 +1,114 @@
+.promo-center-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-banner-card {
+    background: #111; /* Dark Premium Background */
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    padding: 60px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Decorative background elements */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 0;
+}
+
+.circle-1 {
+    width: 300px;
+    height: 300px;
+    background: rgba(239, 79, 95, 0.15); /* Zomato Red Tint */
+    top: -100px;
+    right: -50px;
+}
+
+.circle-2 {
+    width: 200px;
+    height: 200px;
+    background: rgba(25, 135, 84, 0.1); /* Success Green Tint */
+    bottom: -50px;
+    left: -50px;
+}
+
+/* Text Styling */
+.promo-text-content {
+    position: relative;
+    z-index: 2;
+}
+
+.promo-badge {
+    color: #ef4f5f;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    border-left: 3px solid #ef4f5f;
+    padding-left: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.promo-heading {
+    color: #fff;
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.highlight-red {
+    color: #ef4f5f;
+}
+
+.promo-subtext {
+    color: #aaa;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+/* Action Button */
+.promo-btn {
+    background: #ef4f5f;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(239, 79, 95, 0.3);
+}
+
+.promo-btn:hover {
+    background: #fff;
+    color: #ef4f5f;
+}
+
+/* Image Float Effect */
+.promo-image-container {
+    z-index: 2;
+    position: relative;
+}
+
+.promo-main-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .promo-banner-card { padding: 40px 25px; text-align: center; }
+    .promo-heading { font-size: 2.2rem; }
+    .promo-badge { border-left: none; border-bottom: 2px solid #ef4f5f; padding-left: 0; }
+    .promo-btn { margin: 0 auto; }
+}

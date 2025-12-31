@@ -1,0 +1,123 @@
+.premium-food-card {
+    border-radius: 18px !important;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease-in-out;
+    background: #fff;
+}
+
+.premium-food-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-image-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.premium-food-card:hover .food-image {
+    transform: scale(1.08);
+}
+
+/* Overlays */
+.food-tag {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    background: #ef4f5f; /* Zomato Red */
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 0 4px 4px 0;
+    z-index: 2;
+}
+
+.wishlist-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    color: #ef4f5f;
+    transition: 0.3s;
+}
+
+.wishlist-btn:hover {
+    background: #ef4f5f;
+    color: white;
+}
+
+.time-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Text Styling */
+.food-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1c1c1c;
+}
+
+.rating-pill {
+    background: #24963f; /* Swiggy/Zomato Green */
+    color: white;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.current-price {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 0.85rem;
+}
+
+/* Premium Button */
+.add-to-cart-btn {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    color: #24963f;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background: #f0fdf4;
+    border-color: #24963f;
+    box-shadow: 0 2px 8px rgba(36, 150, 63, 0.1);
+}
