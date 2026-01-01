@@ -1,4 +1,3 @@
-import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Slider.css';

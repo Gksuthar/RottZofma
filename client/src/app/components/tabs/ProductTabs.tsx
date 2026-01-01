@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { useState } from 'react';
+import { Container } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import './ProductTabs.css';
 import { categories } from '../../../json/CustomerReview';

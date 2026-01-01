@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Slider from '../../components/slider/Slider';
 import ProductTabs from '../../components/tabs/ProductTabs';
@@ -24,7 +24,7 @@ const Shop: React.FC = () => {
 
         {/* Category Tabs Section */}
         <div className="sticky-tabs-wrapper">
-          <ProductTabs onCategoryChange={(cat: string) => {}} />
+          <ProductTabs onCategoryChange={() => {}} />
         </div>
 
         {/* Product Grid */}

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container, Badge, InputGroup, Form } from 'react-bootstrap';
+import { useState, useEffect } from 'react';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import { BsSearch, BsHeart, BsBag, BsPerson } from 'react-icons/bs';
 import './Header.css';
 

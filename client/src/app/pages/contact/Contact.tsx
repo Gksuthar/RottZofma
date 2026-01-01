@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import { BiMapPin, BiMessageSquare, BiPhone } from 'react-icons/bi';
 import { BsMailbox } from 'react-icons/bs';
@@ -118,6 +117,6 @@ function Contact() {
 }
 
 // Dummy Icon for Safety center if lucide-react isn't used
-const ShieldCheck = ({size, className}:any) => <div className={className}>🛡️</div>;
+const ShieldCheck = ({className}:any) => <div className={className}>🛡️</div>;
 
 export default Contact;

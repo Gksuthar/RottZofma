@@ -1,5 +1,4 @@
-import React from 'react';
-import { Container, Row, Col, Button, Card, Badge } from 'react-bootstrap';
+import { Container, Row, Col, Button, Badge } from 'react-bootstrap';
 import { BiMapPin, BiRocket } from 'react-icons/bi';
 import { BsShieldCheck } from 'react-icons/bs';
 import { FaUserSecret } from 'react-icons/fa6';

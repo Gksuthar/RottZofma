@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Badge, Accordion } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { products } from '../../../json/CustomerReview';
