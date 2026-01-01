@@ -17,6 +17,8 @@ export const homeSlides = [
     }
   ];
 
+  // Helo
+
  export const categories = [
     { id: 'organic', label: 'Organic Veg', icon: '🥦' },
     { id: 'spices', label: 'Pure Spices', icon: '🌶️' },
